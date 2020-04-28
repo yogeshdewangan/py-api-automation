@@ -21,3 +21,6 @@ cache provides two command line options to rerun failures from the last pytest i
 If you want to generate pytest html report
 1. install pytest-html plugin by running command "pip install pytest-html"
 2. run tests by command "pytest --html=../log/pytest_report.html"
+
+If you want to run grouped tests
+run command "pytest -m smoke --html=../log/pytest_report.html"    // smoke is the group name marked by "@pytest.mark.smoke"
