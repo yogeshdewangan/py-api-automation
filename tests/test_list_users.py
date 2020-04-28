@@ -1,4 +1,3 @@
-from configuration import getconfig
 from utilities.baseClass import BaseClass
 import logging
 

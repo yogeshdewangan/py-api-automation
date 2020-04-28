@@ -7,7 +7,7 @@ def setup(request):
     # Read command line parameter
     os.environ['CONF'] = request.config.getoption("testenv")
 
-    print("setup1")
+    print("setup")
     yield
     print("teardown")
 
