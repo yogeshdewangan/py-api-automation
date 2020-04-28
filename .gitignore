@@ -9,4 +9,5 @@ build/
 erlide.log.lck
 .idea
 /log/*
+/log
 
