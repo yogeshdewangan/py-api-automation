@@ -17,3 +17,7 @@ cache provides two command line options to rerun failures from the last pytest i
 1. --lf, --last-failed - to only re-run the failures.
 2. --ff, --failed-first - to run the failures first and then the rest of the tests.
 3. For cleanup (usually not needed), a --cache-clear option allows to remove all cross-session cache contents ahead of a test run.
+
+If you want to generate pytest html report
+1. install pytest-html plugin by running command "pip install pytest-html"
+2. run tests by command "pytest --html=log/pytest_report.html"
