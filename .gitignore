@@ -1,0 +1,11 @@
+.gradle/
+*.log
+*.pyc
+/.nb-gradle/
+build/
+.metadata/
+.project
+.pydevproject
+erlide.log.lck
+.idea
+
