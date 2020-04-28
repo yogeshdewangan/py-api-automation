@@ -1,8 +1,0 @@
-2020-04-29 00:31:29,809 DEBUG [test_list_users] test finished
-2020-04-29 00:40:35,880 DEBUG [connectionpool] Starting new HTTPS connection (1): reqres.in:443
-2020-04-29 00:40:37,529 DEBUG [connectionpool] https://reqres.in:443 "GET /api/users?page=3 HTTP/1.1" 200 None
-2020-04-29 00:40:59,288 DEBUG [connectionpool] Starting new HTTPS connection (1): reqres.in:443
-2020-04-29 00:41:00,759 DEBUG [connectionpool] https://reqres.in:443 "GET /api/users?page=3 HTTP/1.1" 200 None
-2020-04-29 00:41:36,621 DEBUG [connectionpool] Starting new HTTPS connection (1): reqres.in:443
-2020-04-29 00:41:38,072 DEBUG [connectionpool] https://reqres.in:443 "GET /api/users?page=2 HTTP/1.1" 200 None
-2020-04-29 00:41:41,737 DEBUG [test_list_users] test finished
