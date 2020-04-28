@@ -8,4 +8,5 @@ build/
 .pydevproject
 erlide.log.lck
 .idea
+/log/*
 
