@@ -20,4 +20,4 @@ cache provides two command line options to rerun failures from the last pytest i
 
 If you want to generate pytest html report
 1. install pytest-html plugin by running command "pip install pytest-html"
-2. run tests by command "pytest --html=log/pytest_report.html"
+2. run tests by command "pytest --html=../log/pytest_report.html"
