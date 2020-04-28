@@ -10,4 +10,5 @@ erlide.log.lck
 .idea
 /log/*
 /log
-
+/.pytest_cache
+/.*
