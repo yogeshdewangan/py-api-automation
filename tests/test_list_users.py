@@ -5,7 +5,6 @@ import logging
 log = logging.getLogger(__name__)
 
 class TestUsers(BaseClass):
-
     def test_list_users(self):
         self.list_users()
         self.verify_users_list()
