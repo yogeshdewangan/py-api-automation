@@ -5,9 +5,9 @@ log = logging.getLogger(__name__)
 
 class TestDeleteUser(BaseClass):
 
-    def test_list_users(self):
-        self.list_users()
-        self.verify_users_list()
+    def test_delete_user(self):
+        self.delete_user(2)
+        self.verify_user_deleted()
         log.debug("test finished")
         pass
 

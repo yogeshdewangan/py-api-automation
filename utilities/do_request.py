@@ -19,3 +19,8 @@ class DoRequest:
         assert response.status_code == 201, "Response code expected is 201 but found: "+ str(response.status_code)
         return response.json()
 
+    def delete_expect_204(self, url, user_id):
+        response = requests.delete(url+ "/"+ str(user_id))
+        assert response.status_code == 204, "Response code expected is 204 but found: "+ str(response.status_code)
+        return response
+

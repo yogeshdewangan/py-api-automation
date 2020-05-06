@@ -44,3 +44,10 @@ class BaseClass():
         pages = jsonpath.jsonpath(self.create_user_response, "name")
         assert pages[0]== "Yogesh", "Name does not match"
 
+    def delete_user(self, user_id):
+        url = self.get_config()["createuserurl"]
+        self.delete_user_response = self.do_request.delete_expect_204(url, user_id)
+
+    def verify_user_deleted(self):
+        assert self.delete_user_response.status_code == 204
+
