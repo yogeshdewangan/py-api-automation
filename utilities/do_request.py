@@ -24,3 +24,8 @@ class DoRequest:
         assert response.status_code == 204, "Response code expected is 204 but found: "+ str(response.status_code)
         return response
 
+    def update_expect_200(self, url, payload):
+        response = requests.put(url, data=payload)
+        assert response.status_code == 200, "Response code expected is 200 but found: " + str(response.status_code)
+        return response.json()
+

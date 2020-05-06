@@ -51,3 +51,18 @@ class BaseClass():
     def verify_user_deleted(self):
         assert self.delete_user_response.status_code == 204
 
+    def update_user(self, name, job, user_id):
+        url = self.get_config()["createuserurl"] + "/"+ str(user_id)
+        payload = {"name": name, "job": job}
+        self.update_user_response = self.do_request.update_expect_200(url, payload)
+
+
+    def verify_user_updated(self, name, job):
+        updated_user_name = self.update_user_response["name"]
+        updated_user_job = self.update_user_response["job"]
+        assert updated_user_name == name
+        assert updated_user_job == job
+
+        pages = jsonpath.jsonpath(self.update_user_response, "name")
+        assert pages[0]== "Yogesh", "Name does not match"
+
