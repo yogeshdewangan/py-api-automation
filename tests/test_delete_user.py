@@ -1,5 +1,6 @@
 from utilities.baseClass import BaseClass
 import logging
+import pytest
 
 log = logging.getLogger(__name__)
 
@@ -11,8 +12,10 @@ class TestDeleteUser(BaseClass):
         log.debug("test finished")
         pass
 
+    @pytest.mark.skipif(1>0, reason="Skipping the test based on condition")
     def test_get_single_user(self):
         pass
 
+    @pytest.mark.skip
     def test_single_user_not_found(self):
         pass
