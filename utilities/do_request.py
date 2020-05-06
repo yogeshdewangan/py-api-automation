@@ -6,7 +6,7 @@ class DoRequest:
         query = {'page': page_number}
         headers = {"User-Agent": "secret agent 0.07"}
         response =requests.get(url, params=query, headers=headers )
-        assert response.status_code == 200, "Response code expected is 201 but found: " + str(response.status_code)
+        assert response.status_code == 200, "Response code expected is 200 but found: " + str(response.status_code)
         return response.json()
 
     def get_with_authentication(self, url, page_number):

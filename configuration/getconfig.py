@@ -4,6 +4,8 @@ import logging.config
 logging.config.fileConfig("../configuration/logging.ini")
 log = logging.getLogger(__name__)
 
+# logging.basicConfig(filename='../log/test.log', filemode='w', format='%(asctime)s %(levelname)-5s [%(module)s] %(message)s')
+# log = logging.getLogger(__name__)
 # app config
 from configparser import ConfigParser
 import os

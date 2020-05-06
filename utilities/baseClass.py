@@ -2,6 +2,7 @@ import pytest
 import os
 from ConfigParser import ConfigParser
 from utilities.do_request import DoRequest
+import jsonpath
 
 configParser = ConfigParser()
 configParser.read("../configuration/config.ini")
@@ -22,6 +23,8 @@ class BaseClass():
 
     def verify_users_list(self):
         count = len(self.users_list_response["data"])
+        first_name =self.users_list_response["data"][0]["first_name"]
+        assert first_name is not None
         assert count == 6
 
     def create_user(self, name, job):
@@ -33,6 +36,11 @@ class BaseClass():
         new_user_id = self.create_user_response["id"]
         new_user_name = self.create_user_response["name"]
         new_user_job = self.create_user_response["job"]
-        assert new_user_id != None
+        assert new_user_id is not None
         assert new_user_name == name
         assert new_user_job == job
+
+        #if you want to use jsonpath, you have to return response.text from request method
+        pages = jsonpath.jsonpath(self.create_user_response, "name")
+        assert pages[0]== "Yogesh", "Name does not match"
+
