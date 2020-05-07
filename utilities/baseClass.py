@@ -1,24 +1,15 @@
 import pytest
-import os
 from ConfigParser import ConfigParser
+from  configuration import getconfig
 from utilities.do_request import DoRequest
 import jsonpath
-
-configParser = ConfigParser()
-configParser.read("../configuration/config.ini")
-
 
 @pytest.mark.usefixtures("setup")
 class BaseClass():
     do_request = DoRequest()
 
-    def get_config(self):
-        # Read config.ini file
-        props = dict(configParser.items(os.environ.get("CONF", "DEFAULT")))
-        return props
-
     def list_users(self):
-        url = self.get_config()["getuserslisturl"]
+        url = getconfig.props["getuserslisturl"]
         self.users_list_response = self.do_request.get_expect_200(url, 2)
 
     def verify_users_list(self):
@@ -28,7 +19,7 @@ class BaseClass():
         assert count == 6
 
     def create_user(self, name, job):
-        url = self.get_config()["createuserurl"]
+        url = getconfig.props["createuserurl"]
         payload = {"name": name, "job": job}
         self.create_user_response = self.do_request.post_expect_201(url, payload)
 
@@ -45,14 +36,14 @@ class BaseClass():
         assert pages[0]== "Yogesh", "Name does not match"
 
     def delete_user(self, user_id):
-        url = self.get_config()["createuserurl"]
+        url = getconfig.props["createuserurl"]
         self.delete_user_response = self.do_request.delete_expect_204(url, user_id)
 
     def verify_user_deleted(self):
         assert self.delete_user_response.status_code == 204
 
     def update_user(self, name, job, user_id):
-        url = self.get_config()["createuserurl"] + "/"+ str(user_id)
+        url = getconfig.props["createuserurl"] + "/"+ str(user_id)
         payload = {"name": name, "job": job}
         self.update_user_response = self.do_request.update_expect_200(url, payload)
 
@@ -65,4 +56,8 @@ class BaseClass():
 
         pages = jsonpath.jsonpath(self.update_user_response, "name")
         assert pages[0]== "Yogesh", "Name does not match"
+
+    def oauth_test(self):
+        response = self.do_request.get_with_Oauth()
+        pass
 
