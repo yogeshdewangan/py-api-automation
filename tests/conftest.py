@@ -2,7 +2,8 @@ import pytest
 import os
 import logging
 log = logging.getLogger(__name__)
-
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+input_file_path = os.path.join(ROOT_DIR, "inputs\data.csv").replace("tests\\", "")
 
 @pytest.fixture(scope="class")
 def setup(request):
@@ -22,3 +23,8 @@ def setup(request):
 
 def pytest_addoption(parser):
     parser.addoption("--testenv", action="store", default="DEFAULT")
+
+@pytest.fixture()
+def read_inputfile(self):
+
+    return input

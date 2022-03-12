@@ -15,14 +15,5 @@ class TestCreateUsers(BaseClass):
         pass
 
 
-    def test_notepad(self):
-        pass
-        # read input from csv file
-
-        # open notepad and write the input to notepad
-
-        # Save the file in txt format
-
-        # ready from input == read from txt file will compate with input file for respective test
 
 
