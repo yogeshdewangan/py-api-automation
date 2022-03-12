@@ -1,5 +1,4 @@
 import pytest
-from ConfigParser import ConfigParser
 from  configuration import getconfig
 from utilities.do_request import DoRequest
 import jsonpath

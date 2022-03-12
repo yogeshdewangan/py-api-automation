@@ -1,6 +1,6 @@
 import pytest
 
-from utilities.baseClass import BaseClass
+from base.api_base.baseClass import BaseClass
 import logging
 
 log = logging.getLogger(__name__)

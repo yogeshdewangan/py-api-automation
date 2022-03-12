@@ -1,7 +1,5 @@
-import pytest
-
 from utilities import xl_utility
-from utilities.baseClass import BaseClass
+from base.api_base.baseClass import BaseClass
 
 
 class TestWithMultipleData(BaseClass):

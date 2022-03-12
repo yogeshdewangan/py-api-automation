@@ -14,11 +14,11 @@ def setup(request):
     log.debug("teardown")
 
 
-# @pytest.fixture(scope="function")
-# def setup(request):
-#     print("setup_test called")
-#     yield
-#     print("teardown called")
+@pytest.fixture(scope="function")
+def setup(request):
+    print("setup_test called")
+    yield
+    print("teardown called")
 
 def pytest_addoption(parser):
     parser.addoption("--testenv", action="store", default="DEFAULT")

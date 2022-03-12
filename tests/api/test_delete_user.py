@@ -1,4 +1,4 @@
-from utilities.baseClass import BaseClass
+from base.api_base.baseClass import BaseClass
 import logging
 import pytest
 
