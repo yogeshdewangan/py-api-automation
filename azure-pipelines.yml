@@ -14,7 +14,8 @@ steps:
 - script: |
     dir
     pip install pytest xlrd pytest-html
-    pip install -r requirements.txt;
+    dir
+    pip install -r ../requirements.txt;
     pytest tests\api --html="c:/reports/report.html"
     echo "Automation Execution Finished"
   displayName: 'Run a multi-line script'
