@@ -1,0 +1,7 @@
+2022-03-20 15:30:29,625 DEBUG [connectionpool] Starting new HTTPS connection (1): reqres.in:443
+2022-03-20 15:30:30,143 DEBUG [connectionpool] https://reqres.in:443 "GET /api/users?page=2 HTTP/1.1" 200 None
+2022-03-20 15:30:30,145 DEBUG [test_list_users] test finished
+2022-03-20 15:30:30,152 DEBUG [connectionpool] Starting new HTTP connection (1): thetestingworldapi.com:80
+2022-03-20 15:30:30,340 DEBUG [connectionpool] http://thetestingworldapi.com:80 "POST /Token HTTP/1.1" 200 378
+2022-03-20 15:30:30,344 DEBUG [connectionpool] Starting new HTTP connection (1): thetestingworldapi.com:80
+2022-03-20 15:30:30,403 DEBUG [connectionpool] http://thetestingworldapi.com:80 "GET /api/StDetails/1 HTTP/1.1" 404 0
