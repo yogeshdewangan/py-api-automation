@@ -1,0 +1,22 @@
+
+trigger:
+- master
+
+pool:
+  name: myagentpool
+  demands:
+   - agent.name -equals mywin
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    pip install virtualenv; 
+    python -m venv venv; 
+    venv\Scripts\activate; 
+    pip install pytest,xlrd,pytest-html
+    pip install -r requirements.txt;
+    pytest tests\api --html="c:/reports/report.html"
+    echo "Automation Execution Finished"
+  displayName: 'Run a multi-line script'
