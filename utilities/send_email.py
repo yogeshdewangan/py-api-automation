@@ -5,7 +5,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def send_report(subject, body, sender_email, password, receiver_email):
+def send_report(subject, body, sender_email, password, receiver_email, cc):
 
 
     # Create a multipart message and set headers
@@ -13,7 +13,7 @@ def send_report(subject, body, sender_email, password, receiver_email):
     message["From"] = sender_email
     message["To"] = receiver_email
     message["Subject"] = subject
-    #message["Bcc"] = receiver_email  # Recommended for mass emails
+    message["Cc"] = cc  # Recommended for mass emails
 
     # Add body to email
     message.attach(MIMEText(body, "plain"))
