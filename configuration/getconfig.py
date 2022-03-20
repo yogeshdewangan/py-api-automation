@@ -1,9 +1,9 @@
 # log config
 import logging
 
-f = open("../log/test.log", "a")
-f.write("Now the file has more content!")
-f.close()
+# f = open("../log/test.log", "a")
+# f.write("Now the file has more content!")
+# f.close()
 
 
 #logging.basicConfig(filename='../log/test.log', level=logging.DEBUG, filemode='w+', format='%(asctime)s %(levelname)-5s [%(module)s] %(message)s')
