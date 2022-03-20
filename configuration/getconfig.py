@@ -6,7 +6,7 @@ f.write("Now the file has more content!")
 f.close()
 
 
-logging.basicConfig(filename='../log/test.log', level=logging.DEBUG, filemode='w+', format='%(asctime)s %(levelname)-5s [%(module)s] %(message)s')
+#logging.basicConfig(filename='../log/test.log', level=logging.DEBUG, filemode='w+', format='%(asctime)s %(levelname)-5s [%(module)s] %(message)s')
 log = logging.getLogger(__name__)
 
 
