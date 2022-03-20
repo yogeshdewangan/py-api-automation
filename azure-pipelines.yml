@@ -12,9 +12,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-#    pip install virtualenv;
-#    python -m venv venv;
-#    venv\Scripts\activate;
     dir
     pip install pytest xlrd pytest-html
     pip install -r requirements.txt;
