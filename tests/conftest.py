@@ -24,6 +24,7 @@ def pytest_addoption(parser):
     parser.addoption("--testenv", action="store", default="DEFAULT")
 
 def pytest_sessionfinish(session, exitstatus):
+    print(props)
     receiver_emails =  props["receiver_emails"]
     sender_email = props["sender_email"]
     sender_password = props["sender_password"]
