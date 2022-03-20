@@ -25,7 +25,7 @@ def pytest_addoption(parser):
 
 def pytest_sessionfinish(session, exitstatus):
     print(props)
-    receiver_emails =  "yogeshdewangan97@gmail.com,lnsantosh@gmail.com,radhanadgeri@gmail.com"
+    receiver_emails =  "yogeshdewangan97@gmail.com,lnsantosh@gmail.com,azurepytest1@gmail.com"
     sender_email = "azurepytest@gmail.com"
     sender_password = "indiaisbest@123"
     subject = "Html report of pytest pipeline"
