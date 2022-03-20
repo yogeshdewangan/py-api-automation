@@ -12,10 +12,10 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    dir
     pip install pytest xlrd pytest-html
-    dir
     pip install -r requirements.txt
     pytest tests\win --self-contained-html --html="c:/reports/report.html"
+    python myscript.py
+    move report1.html c:\\reports
     echo "Automation Execution Finished"
   displayName: 'Run a multi-line script'
