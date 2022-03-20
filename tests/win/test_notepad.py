@@ -15,7 +15,7 @@ class TestNotepadAndCompareCSV(WinBaseClass):
 
         input_str = other.normalize(str(open(input_file_path, "r").readlines()))
 
-        WinBaseClass.write_and_save_notepad(app_exe_or_full_exe_path="notepad.exe", text=input_str,
-                                            output_file_name=output_file_path)
+        # WinBaseClass.write_and_save_notepad(app_exe_or_full_exe_path="notepad.exe", text=input_str,
+        #                                     output_file_name=output_file_path)
 
         WinBaseClass.verify_csv(input_file_path, output_file_path)
