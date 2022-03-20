@@ -11,11 +11,11 @@ input_file_path = os.path.join(ROOT_DIR, "inputs\data.csv").replace("tests\\", "
 @pytest.fixture(scope="function")
 def setup(request):
     print("setup_test called")
-    try:
-        output_file_path = os.path.join(ROOT_DIR, "outputs\data.csv").replace("tests\\", "")
-        os.remove(output_file_path)
-    except:
-        pass
+    # try:
+    #     output_file_path = os.path.join(ROOT_DIR, "outputs\data.csv").replace("tests\\", "")
+    #     os.remove(output_file_path)
+    # except:
+    #     pass
     yield
 
     print("teardown called")
